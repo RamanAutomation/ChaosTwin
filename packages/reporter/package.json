@@ -1,0 +1,13 @@
+{
+  "name": "@chaostwin/reporter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "JSON and HTML experiment reports. PASS is refused without evidence.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@chaostwin/contracts": "0.1.0"
+  }
+}

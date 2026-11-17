@@ -1,0 +1,53 @@
+{
+  "id": "visitor-check-in",
+  "name": "Visitor check-in",
+  "stopOnFailure": true,
+  "steps": [
+    {
+      "id": "launch",
+      "type": "launch-app",
+      "packageName": "com.chaostwin.demo",
+      "activity": "com.chaostwin.demo.MainActivity",
+      "timeoutMs": 15000
+    },
+    {
+      "id": "visitor_name",
+      "type": "enter-text",
+      "selector": "id:visitor_name",
+      "text": "Test Visitor",
+      "timeoutMs": 10000
+    },
+    {
+      "id": "start_visit",
+      "type": "tap",
+      "selector": "id:start_visit",
+      "timeoutMs": 10000
+    },
+    {
+      "id": "submit_visit",
+      "type": "tap",
+      "selector": "id:submit_visit",
+      "timeoutMs": 10000
+    },
+    {
+      "id": "visit_status",
+      "type": "assert-text",
+      "selector": "id:visit_status",
+      "text": "Checked in",
+      "timeoutMs": 10000
+    },
+    {
+      "id": "records",
+      "type": "api-verify",
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/visitors",
+      "expectStatus": 200,
+      "timeoutMs": 10000
+    },
+    {
+      "id": "evidence_shot",
+      "type": "screenshot",
+      "timeoutMs": 10000
+    }
+  ]
+}

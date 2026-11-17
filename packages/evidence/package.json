@@ -1,0 +1,13 @@
+{
+  "name": "@chaostwin/evidence",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Per-experiment evidence folders for ChaosTwin. A folder is never overwritten.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@chaostwin/contracts": "0.1.0"
+  }
+}

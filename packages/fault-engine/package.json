@@ -1,0 +1,13 @@
+{
+  "name": "@chaostwin/fault-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Emulator fault scheduling for ChaosTwin. Packet loss is not implemented.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@chaostwin/contracts": "0.1.0"
+  }
+}

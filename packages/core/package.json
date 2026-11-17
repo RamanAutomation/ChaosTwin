@@ -1,0 +1,13 @@
+{
+  "name": "@chaostwin/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "ChaosTwin orchestration core: environment, workflows, recovery, and experiments.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@chaostwin/contracts": "0.1.0"
+  }
+}

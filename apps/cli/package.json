@@ -1,0 +1,19 @@
+{
+  "name": "@chaostwin/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "ChaosTwin command line for inspection, sessions, and the network recovery experiment.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@chaostwin/android-adapter": "0.1.0",
+    "@chaostwin/contracts": "0.1.0",
+    "@chaostwin/core": "0.1.0",
+    "@chaostwin/evidence": "0.1.0",
+    "@chaostwin/fault-engine": "0.1.0",
+    "@chaostwin/reporter": "0.1.0",
+    "pino": "10.4.0"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "chaostwin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ChaosTwin Mobile — discover failures before your users do.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "packageManager": "npm@11.16.0",
+  "workspaces": [
+    "apps/cli",
+    "packages/contracts",
+    "packages/core",
+    "packages/android-adapter",
+    "packages/evidence",
+    "packages/fault-engine",
+    "packages/reporter"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b --pretty false && tsc -p tsconfig.tests.json --pretty false --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "doctor": "tsx apps/cli/src/index.ts doctor",
+    "devices": "tsx apps/cli/src/index.ts devices",
+    "session": "tsx apps/cli/src/index.ts session",
+    "experiment": "tsx apps/cli/src/index.ts experiment",
+    "verify": "npm run typecheck && npm run lint && npm test"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.19.2",
+    "eslint": "10.15.0",
+    "globals": "17.14.0",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.73.0",
+    "vitest": "5.1.0"
+  }
+}
